@@ -1,0 +1,20 @@
+<!-- cookie_banner.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Banner</title>
+</head>
+<body>
+    <div id="cookie-banner">
+        <p>Nous utilisons des cookies pour améliorer votre expérience utilisateur. Acceptez-vous l'utilisation de cookies ?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" name="consent" value="accept">Accepter</button>
+            <button type="submit" name="consent" value="reject">Refuser</button>
+        </form>
+    </div>
+</body>
+</html>
